@@ -1,10 +1,9 @@
 #include <stdio.h>
-
+/* uses puts function */
 int main(void)
 {
 	char *s = "Programming is like building a multilingual puzzle\n";
 
-	puts (s);
-	return 0;
+	puts(s);
+	return (0);
 }
-	
