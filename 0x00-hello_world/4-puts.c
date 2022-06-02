@@ -1,7 +1,10 @@
 #include <stdio.h>
-/* uses puts function */
+/** 
+ * main -entry point
+ * return: returns zero
+ *
+**/
 int main(void)
-/* uses puts function */
 {
 	char *s = "\"Programming is like building a multilingual puzzle";
 
