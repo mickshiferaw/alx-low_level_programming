@@ -12,7 +12,6 @@ int main(void)
 	{
 		putchar(m);
 	}
-	return (0);
 	puts("\n");
-
+	return (0);
 }
