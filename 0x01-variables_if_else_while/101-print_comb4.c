@@ -1,40 +1,30 @@
 #include <stdio.h>
 /**
- * main - Main code prints three degit combination
+ * main - Main code prints all possible combination of three digit
  * Return: Returns zero
  */
-
 int main(void)
 {
-	int a, b, c, e, f;
+	int a;
+	int b;
+	int c;
 
-	a = b = c  = 48;
-
-	while (c < 58)
+	for (a = 0; a < 8; a++)
 	{
-		b = 48;
-		while (b < 58)
+		for (b = a + 1; b < 9; b++)
 		{
-			a = 48;
-			while (a < 58)
+			for (c = b + 1; c < 10; c++)
 			{
-				e = (c * 10) + b;
-				f = (b * 10) + a;
-				if (e < f)
-				{
-				putchar (c);
-				putchar (b);
-				putchar (a);
-				if (c == 56 && b == 57 && a == 57)
-				break;
+				putchar((a % 10) + '0');
+				putchar((b % 10) + '0');
+				putchar((c % 10) + '0');
+				if (a == 7 && b == 8 && c == 9)
+				continue;
 				putchar (',');
 				putchar (' ');
-				}
-				a++;
 			}
-			b++;
+
 		}
-		c++;
 	}
 	putchar ('\n');
 	return (0);
