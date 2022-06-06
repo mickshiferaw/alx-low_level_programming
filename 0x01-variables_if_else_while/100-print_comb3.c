@@ -1,24 +1,26 @@
 #include <stdio.h>
 /**
- * main - Main prints number from 0 to 99
- * Return: returns zero
+ * main - Main code prints all possible combination of two digit
+ * Return: Returns zero
  */
-
 int main(void)
 {
-	int m;
+	int a;
 	int b;
 
-	for (m = 0; m <= 99; m++)
+	for (a = 0; a < 9; a++)
 	{
-	for (b = 0; b <= 99; b++)
-	{
-	putchar ((m / 10) + '0');
-	putchar ((b % 10) + '0');
-	putchar (',');
-	putchar (' ');
-	}
-	}
+		for (b = a + 1; b < 10; b++)
+		{
+		putchar((a % 10) + '0');
+		putchar((b % 10) + '0');
+		if (a == 8 && b == 9)
+		continue;
+		putchar (',');
+		putchar (' ');
 
+		}
+	}
+	putchar ('\n');
 	return (0);
 }
