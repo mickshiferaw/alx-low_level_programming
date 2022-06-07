@@ -5,8 +5,13 @@
  */
 int main(void)
 {
-	int _putchar;
+	char a[9] = "_putchar";
+	int m;
 
-	putchar(_putchar);
+	for (m = 0; m < 8; m++)
+	{
+		putchar(a[m]);
+	}
+	putchar ('\n');
 	return (0);
 }
