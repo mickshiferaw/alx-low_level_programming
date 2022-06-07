@@ -4,7 +4,7 @@
  * main - Main code prints the alphabet
  * Return: Returns zero
  */
-void print_alphabet(void)/*function prints alphabet*/
+void print_alphabet(void)
 {
 	int m;
 
