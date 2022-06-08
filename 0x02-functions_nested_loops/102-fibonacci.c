@@ -14,11 +14,11 @@ int main(void)
 	{
 		if (b != 20365011074)
 		{
-			printf("%ld\n, ", b);
+			printf("%ld, ", b);
 		}
 		else
 		{
-			printf("ld\n", b);
+			printf("%ld\n", b);
 		}
 		d = b + c;
 		b = c;
