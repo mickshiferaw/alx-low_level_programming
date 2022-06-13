@@ -5,10 +5,9 @@
  */
 int _strlen(char *s)
 {
-	int count;
 
-	while (*s[count] != '\0')
+	while (*s != '\0')
 	{
-		count++;
+		*s++;
 	}
 }
