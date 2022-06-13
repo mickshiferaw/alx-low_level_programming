@@ -13,6 +13,7 @@ void rev_string(char *s)
 	{
 
 	for (a = b - 1; a >= 0; a--)
+		b++;
 
 	}
-	b++;
+	
