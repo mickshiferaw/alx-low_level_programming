@@ -22,7 +22,7 @@ int main (void)
 		b += a;
 	}
 	}
-	d[c++] = (2772 - n);
+	d[c++] = (2772 - b);
 	d[c] = '\0';
 	printf("%s", d);
 	return (0);
