@@ -1,70 +1,23 @@
 #include "main.h"
-int bandersnatch(char *s1, char *s2);
-char *move(char *s2);
+#include <stdio.h>
 /**
- * wildcmp - compares two str
- * @s1: str
- * @s2: str
- * Return: 1 0r 0
+ * wildcmp - Entry
+ * @s1: input
+ * @s2: input1
+ * Return: 0
  */
 int wildcmp(char *s1, char *s2)
 {
-
-	int sum = 0;
-
-	if (*s1 == '\0' && *s2 == '*' && !*move(s2))
+	if (*s1 == '\0' && *s2 == '\0')
 		return (1);
-
-	if (*s1 == *s2)
-	{
-		if (*s1 == '\0')
-			return (1);
+	else if (*s1 == *s2)
 		return (wildcmp(s1 + 1, s2 + 1));
-	}
-
-	if (*s1 == '\0' || *s2 == '\0')
-		return (0);
-
 	if (*s2 == '*')
 	{
-		s2 = move(s2);
-		if (*s2 == '\0')
+		if (*s2 == '*' && *(s2 + 1) != '\0' && *s1 == '\0')
+			return (0);
+		if (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2))
 			return (1);
-		if (*s1 == *s2)
-			sum += wildcmp(s1 + 1, s2 + 1);
-		sum += bandersnatch(s1 + 1, s2);
-		return (!!sum);
 	}
 	return (0);
-}
-
-/**
- * bandersnatch - checks recursively for all the paths when the
- * characters are equal
- * @s1: str
- * @s2: str
- * Return: return wildcmp() or of itself
- */
-int bandersnatch(char *s1, char *s2)
-{
-
-	if (*s1 == '\0')
-		return (0);
-	if (*s1 == *s2)
-		return (wildcmp(s1, s2));
-	return (bandersnatch(s1 + 1, s2));
-}
-
-/**
- * *move - moves the current char past the *
- * @s2: string to iterate over
- * Return: the address of the character after the *
- */
-char *move(char *s2)
-{
-
-	if (*s2 == '*')
-		return (move(s2 + 1));
-	else
-		return (s2);
 }
