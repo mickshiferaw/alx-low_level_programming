@@ -2,7 +2,7 @@
 /**
 * _strdup - string duplicator function
 * @str: str
-* Return: string 
+* Return: string
 */
 char *_strdup(char *str)
 {
