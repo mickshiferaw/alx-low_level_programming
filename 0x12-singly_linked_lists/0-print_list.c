@@ -7,7 +7,7 @@
 size_t print_list(const list_t *h)
 { 
 
-	for (size_t m = 0;, h != NULL)
+	for (size_t m = 0; h != NULL)
 	{
 		if (h->str == NULL)
 			printf("[0] (nil)\n");
