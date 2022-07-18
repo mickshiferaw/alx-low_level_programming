@@ -6,8 +6,9 @@
  */
 size_t print_list(const list_t *h)
 { 
+	size_t m = 0;
 
-	for (size_t m = 0; h != NULL)
+	while (h != NULL)
 	{
 		if (h->str == NULL)
 			printf("[0] (nil)\n");
