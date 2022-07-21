@@ -1,6 +1,4 @@
 #include "main.h"
-#include <studio.h>
-#include <string.h>
 /**
  * binary_to_uint - changes binary to an unsigned int
  * @b: points to a string of 0 and 1
@@ -8,16 +6,18 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int slen = strlen(b);
-	unsigned int total = 0;
-	unsigned int decimalval = 1;
+	int m;
+	unsigned int uinn = 0;
 
-	for (unsigned int m = (slen - 1); m >= 0; m--)
+	if (!b)
+		return (0);
+
+	for (m = 0; b[m]; m++)
 	{
-		if (b[m] == '1')
-		{
-			total += decimalval;
-			decimalval *= 2;
-		}
+		if (b[m] < '0' || b[m] > '1')
+			return (0);
+		uinn = 2 * uinn + (b[m] - '0');
 	}
+
+	return (uinn);
 }
